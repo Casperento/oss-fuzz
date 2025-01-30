@@ -1,8 +1,4 @@
 homepage: "https://github.com/Casperento/CJsonObject"
 language: c++
 primary_contact: "44746868+Casperento@users.noreply.github.com"
-sanitizers:
-  - address
-  - undefined
-  - memory
 main_repo: 'https://github.com/Casperento/CJsonObject.git'
