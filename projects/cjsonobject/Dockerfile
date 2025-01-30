@@ -16,10 +16,10 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder
-
-RUN apt-get update && apt-get install -y cmake ninja-build
-
-RUN git clone https://github.com/Casperento/CJsonObject.git cjsonobject
-
-WORKDIR cjsonobject
+RUN apt-get update && \
+    apt-get install -y cmake \
+                       ninja-build
+RUN git clone https://github.com/Casperento/CJsonObject.git $SRC/cjsonobject
+RUN chmod +x $SRC/cjsonobject/fuzz/ossfuzz.sh
+WORKDIR $SRC/cjsonobject
 COPY build.sh $SRC/
